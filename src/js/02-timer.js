@@ -29,7 +29,7 @@ const options = {
   },
 
 };
-flatpickr('#datetime-picker', options);
+const datePickr = flatpickr('#datetime-picker', options);
 
 function startTimer() {
   const selectedDate = document.getElementById("datetime-picker").value;
