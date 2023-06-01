@@ -25,6 +25,11 @@ formRef.addEventListener('submit', function (event) {
   const delayStep = parseInt(stepInput.value);
   const amount = parseInt(amountInput.value);
 
+  if (stepInput.value <= 0 || delayInput.value <= 0 || amountInput.value <= 0) {
+    Notiflix.Notify.info('All fields must be greater than 0.');
+    return;
+  }
+
   let currentDelay = firstDelay;
 
   for (let i = 1; i <= amount; i++) {

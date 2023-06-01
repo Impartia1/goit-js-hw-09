@@ -52,6 +52,8 @@ function startTimer() {
     const { days, hours, minutes, seconds } = convertMs(timeRemaining);
 
     updateTimerUI({ days, hours, minutes, seconds });
+
+    document.getElementById("datetime-picker").disabled = true;
   }
 }
 
